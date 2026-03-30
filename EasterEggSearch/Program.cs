@@ -7,12 +7,26 @@
         static int pisanka = 1;
         static int gracz = 2;
         static int sciana = 3;
+        static bool winCondition = false;
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Przesuwania nie masz, powodzenia");
             Generate_Landscape();
             Show_Landscape();
+            Console.WriteLine("Przesuwania nie masz, powodzenia");
+            Game();
+        }
+
+        static void Game()
+        {
+            while (true)
+            {
+                if (winCondition)
+                {
+                    break;
+                }
+                
+            }
         }
 
         static void Generate_Landscape()
@@ -676,6 +690,7 @@
 
         static void Show_Landscape()
         {
+            Console.Clear();
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 10; j++)
